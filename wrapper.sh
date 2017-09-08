@@ -8,7 +8,6 @@ if [[ $# == '0' ]]; then
 	nBuild=$(drone build last --branch ${PLUGIN_BRANCH} --format {{.Number}} ${PLUGIN_REPOSITORY})
 	status=$(drone build last --branch ${PLUGIN_BRANCH} --format {{.Status}} ${PLUGIN_REPOSITORY})
 	if [[ $status = "success" ]]; then
-		echo "succes"
 		if [[ ${PLUGIN_FORK} = "true" ]]; then
 			drone build start --fork ${PLUGIN_REPOSITORY} $nBuild
 		else
