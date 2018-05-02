@@ -1,3 +1,7 @@
+# Docker image for the dron trigger plugin
+#
+#     docker build --rm -t plugins/drone-trigger .
+
 FROM alpine:3.5
 
 WORKDIR /root
